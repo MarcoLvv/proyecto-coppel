@@ -1,0 +1,49 @@
+Comandos Utiles
+
+Desinstala todas las bibliotecas: Utiliza el comando pip freeze para enumerar todas las bibliotecas instaladas y luego desinstálalas una por una. Puedes hacer esto con un bucle for en el símbolo del sistema de Windows. Ejecuta los siguientes comandos:
+
+for /f "delims=" %i in ('pip freeze') do pip uninstall -y %i
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+python get-pip.py  
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+El mensaje de advertencia que estás viendo se refiere a la diferencia de formato de nueva línea (line ending) entre sistemas operativos. Git está informando que, en tu caso, cuando agregues los archivos al repositorio, las nuevas líneas (LF en sistemas UNIX y CRLF en sistemas Windows) serán convertidas.
+
+Esto no debería ser un problema en la mayoría de los casos, pero si trabajas en un equipo con personas que utilizan diferentes sistemas operativos, es posible que desees configurar Git para manejar los saltos de línea de manera consistente. Puedes hacer esto configurando core.autocrlf en Git.
+
+Para configurar core.autocrlf, puedes ejecutar los siguientes comandos en tu terminal:
+
+bash
+Copy code
+git config --global core.autocrlf true
+Esto convertirá automáticamente las nuevas líneas al formato apropiado para el sistema operativo en el que estés trabajando.
+
+Sin embargo, ten en cuenta que esto puede afectar archivos binarios y podría introducir cambios no deseados en ciertos tipos de archivos, como imágenes o archivos binarios. Si experimentas problemas con esto, puedes desactivar core.autocrlf utilizando el siguiente comando:
+
+bash
+Copy code
+git config --global core.autocrlf false
+Es importante discutir y acordar cómo manejar los saltos de línea en tu equipo para evitar posibles conflictos en el futuro.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+La URL del repositorio remoto parece tener un problema con la barra invertida \ al final. Esto puede estar causando el error al intentar hacer push. Para corregirlo, necesitas eliminar esa barra invertida y asegurarte de que la URL sea válida. Aquí tienes cómo puedes corregirlo:
+
+Eliminar la barra invertida de la URL del repositorio remoto:
+Utiliza el comando git remote set-url para cambiar la URL y eliminar la barra invertida. Ejecuta el siguiente comando en tu terminal:
+
+bash
+Copy code
+git remote set-url origin https://github.com/MarcoLvv/proyecto-coppel.git
+Esto eliminará la barra invertida \ al final de la URL.
+
+Verificar la corrección:
+Después de cambiar la URL del repositorio remoto, verifica que se haya corregido correctamente ejecutando nuevamente el comando git remote -v
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

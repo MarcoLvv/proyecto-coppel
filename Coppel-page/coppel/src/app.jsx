@@ -8,6 +8,9 @@ import {ProductoFavoritos} from './productos-favorito'
 import {MasBuscados} from './mas-buscados'
 import {Footer} from './footer'
 import './output.css'
+import './resources/estilos/slick.css'
+import './resources/estilos/slick-theme.css'
+import './resources/estilos/carrusel.css'
 
 export function App() {
   return (
