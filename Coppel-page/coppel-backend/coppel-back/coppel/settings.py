@@ -132,7 +132,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #cores authorization
 CORS_ALLOWED_ORIGINS = [
-    
+    "http://localhost:5173"
 ]
 # Schema
 REST_FRAMEWORK = {
