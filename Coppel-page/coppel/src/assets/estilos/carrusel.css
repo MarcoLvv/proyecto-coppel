@@ -1,0 +1,29 @@
+.product-container {
+    /* display: inline-block; */
+    text-align: center; /* Para centrar el contenido dentro del contenedor */
+    padding: 20px; /* Ajusta según tu preferencia */
+    border-radius: 8px; /* Agrega esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Agrega sombra */
+    background-color: #ffffff; /* Color de fondo */
+
+
+}
+
+.card {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card img {
+    height: auto; /* Mantén la proporción de aspecto */
+width: 50%; /* Ajusta el ancho de la imagen según sea necesario */
+
+}
+
+.card p {
+margin-top: 8px; /* Espacio superior entre el texto y la imagen */
+}
